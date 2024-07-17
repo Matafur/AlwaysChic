@@ -1,0 +1,167 @@
+.body{
+  background-color: rgba(255, 192, 203, 0.429);
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-item {
+    height: 32rem;
+  }
+
+  .site-header {
+    background-color: rgba(0, 0, 0, .85);
+  }
+  
+  .site-header a:hover {
+    color: #ffffff;
+  }
+
+  .menu-item{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .menu-item a {
+    color: #a49f9f;
+    text-decoration: none;
+  }
+
+  .menu-item :hover {
+    color: #ffffff;
+    
+  }
+
+  #img-Carrusel{
+    width: 100%;
+    height: 100%;
+  }
+
+  #img-carrusel-tarjeta{
+    height: 100%;
+  }
+  
+  #img-carrusel-tarjetab{
+    margin-top:10%;
+    border-radius: 5%;
+    border: 5px solid;
+  }
+
+  .tarjeta-blanca{
+    padding: 0px 48px 0px 48px; 
+    margin-right: 16px;
+    text-align: center;
+  }
+
+  .tarjeta-oscura{
+    background-color: #212529;
+    padding: 48px 48px 0px 48px; 
+    margin-right: 16px;
+    text-align: center;
+    color: #ffffff;
+    
+  }
+
+  .tarjeta-carrusel{
+    padding: 8px 8px 8px 8px; 
+    margin-right: 16px;
+    text-align: center;
+  }
+  
+  .tarjeta-carruselb{
+    padding: 8px 8px 8px 8px; 
+    margin-right: 16px;
+    text-align: center;
+
+  }
+
+/*  .nombreEmpresa {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 10; 
+    width: 100%;
+    height: 100%;
+}
+
+.textoEmpresa{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 11; 
+  font-size: 150px;
+
+}*/
+
+
+  .carousel-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    z-index: 1;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer .column {
+    padding: 20px;
+  }
+  
+  .footer .tarjeta-blanca, .footer .tarjeta-oscura, .footer .tarjeta-redes {
+    margin-bottom: 20px;
+  }
+  
+  .footer h2 {
+    color: #fff;
+    font-size: 1.5em;
+  }
+  
+  .footer .social-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer .social-icons li {
+    margin: 5px 0;
+  }
+  
+  .footer .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer .social-icons a i {
+    margin-left: 10px;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #e5b21a;
+  }
+  
+  #contacto{
+    font-weight: bold;
+  }
+
+
+    @media (min-width: 768px) {
+    .flex-md-equal > * {
+    flex: 1;
+    }
+    }
+    
