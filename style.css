@@ -1,5 +1,16 @@
 .body{
-  background-color: rgba(255, 192, 203, 0.429);
+  /*background: rgb(251,148,63);
+  background: radial-gradient(circle, rgba(251,148,63,1) 0%, rgba(252,70,107,1) 100%);*/
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,139,253,1) 27%, rgba(252,176,69,1) 100%);
+
+}
+
+hr {
+  border: none;
+  height: 4px;
+  background-color: #333;
+  margin: 40px 0;
 }
 
 .carousel-caption {
@@ -43,7 +54,13 @@
   }
   
   #img-carrusel-tarjetab{
-    margin-top:10%;
+    /*margin-top:10%;*/
+    border-radius: 5%;
+    border: 5px solid;
+  }
+
+  #img-carrusel-tarjetaba{
+    height: 100%;
     border-radius: 5%;
     border: 5px solid;
   }
@@ -73,7 +90,12 @@
     padding: 8px 8px 8px 8px; 
     margin-right: 16px;
     text-align: center;
+  }
 
+  #img-carrusel-tarjetabb{
+    padding: 8px 8px 8px 8px; 
+    margin-right: 16px;
+    text-align: center;
   }
 
 /*  .nombreEmpresa {

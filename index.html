@@ -73,13 +73,13 @@
       </div>
     </nav>
   </header>
-
-  <br id="comoFunciona">
+  <br >
   <div>
+    <hr class="featurette-divider" id="comoFunciona">
     <!--Contenedor primera fila de imagenes-->
-    <div class="py-4">
+    <div class="py-3" >
       <!--Primera tarjeta-->
-      <h1 class="text-center">¿Como funciona?</h1>
+      <h1 class="text-center py-3" >¿Como funciona?</h1>
       <div>
         <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
           <div class="tarjeta-oscura">
@@ -121,15 +121,15 @@
             <div class="my-3 p-3">
               <p class="lead">And an even wittier subheading.</p>
             </div>
-            <button class="btn btn-warning w-100 py-2" type="submit">Comienza tu registro</button>
+            <button class="btn btn-warning w-100 py-2" onclick="registro()">Comienza tu registro</button>
           </div>
         </div>
-      </div>
+      </div >
     </div>
-    <br id="login">
+    <hr class="featurette-divider" id="login">    
     <!--Segunda fila de tarjetas-->
-    <div class="py-4">
-      <h1 class="text-center py-4">Ingreso</h1>
+    <div class="py-3" >
+      <h1 class="text-center py-3" >Ingreso</h1>
       <div>
         <!--Cuarta tarjeta carrusel-->
         <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
@@ -164,18 +164,16 @@
             <h2 class="display-5">Bienvenido</h2>
             <div class="my-1 p-1">
               <p class="lead">Texto de bienvenida</p>
-              <form>
+              <form id="loginForm">
                 <div class="form-floating my-3">
-                  <input type="email" class="form-control" name="correo" placeholder="name@example.com">
-                  <label for="floatingInput">Email</label>
+                  <input type="email" class="form-control" id="correo" name="correo" placeholder="name@example.com" required>
+                  <label for="correo">Email</label>
                 </div>
                 <div class="form-floating my-3">
-                  <input type="password" class="form-control" name="password" placeholder="Password"
-                    autocomplete="off" />
-                  <label for="floatingPassword">Contraseña</label>
+                  <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
+                  <label for="password">Contraseña</label>
                 </div>
                 <button class="btn btn-primary w-100 py-2" type="submit">Ingresar</button>
-                <br><br>
               </form>
               <p class="lead">Texto de para registrarse</p>
               <button class="btn btn-warning w-100 py-2" type="submit">Comienza tu registro</button>
@@ -189,13 +187,12 @@
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </div>
-    <br id="comentarios">
+    <hr class="featurette-divider" id="comentarios">
     <!--Tercera seccion de la pagina comentarios-->
-    <div class="py-4">
-      <h1 class="text-center">Comentarios</h1>
-      
+    <div class="py-3" >
+      <h1 class="text-center py-3" >Comentarios</h1>
       <div>
         <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
           <!--septima tarjeta Carrusel-->
@@ -226,24 +223,24 @@
           <div class="tarjeta-carrusel">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <img src="./assets/Carrusel 5/carrusel5Img1.jpg" id="img-carrusel-tarjetab" class="d-block w-100"
+                <div class="carousel-item active" data-bs-interval="30000">
+                  <img src="./assets/Carrusel 5/carrusel5Img1.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                  <img src="./assets/Carrusel 5/carrusel5Img2.jpg" id="img-carrusel-tarjetab" class="d-block w-100"
+                <div class="carousel-item" data-bs-interval="30000">
+                  <img src="./assets/Carrusel 5/carrusel5Img2.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item">
-                  <img src="./assets/Carrusel 5/carrusel5Img3.jpg" id="img-carrusel-tarjetab" class="d-block w-100"
+                <div class="carousel-item" data-bs-interval="30000">
+                  <img src="./assets/Carrusel 5/carrusel5Img3.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item">
-                  <img src="./assets/Carrusel 5/carrusel5Img4.jpg" id="img-carrusel-tarjetab" class="d-block w-100"
+                <div class="carousel-item" data-bs-interval="30000">
+                  <img src="./assets/Carrusel 5/carrusel5Img4.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item">
-                  <img src="./assets/Carrusel 5/carrusel5Img5.jpg" id="img-carrusel-tarjetab" class="d-block w-100"
+                <div class="carousel-item" data-bs-interval="30000">
+                  <img src="./assets/Carrusel 5/carrusel5Img5.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
               </div>
@@ -330,5 +327,6 @@
 <!--Script de js - Boostrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
   integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 
 </html>
