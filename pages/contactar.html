@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Always Chic</title>
+</head>
+
+<body class="body">
+  <div class="carousel ">
+    <!--Imagenes Carrusel-->
+    <!--<h1 class="nombreEmpresa "> Always chic</h1>-->
+    <div class="capa">
+      <!--Carrusel principal-->
+      <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/Carrusel 1/headImg1.jpg" id="img-Carrusel" class="img-fluid" alt="Imagen Carrusel 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/Carrusel 1/headImg2.jpg" class="img-fluid" id="img-Carrusel" alt="Imagen Carrusel 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/Carrusel 1/headImg3.jpg" class="img-fluid" id="img-Carrusel" alt="Imagen Carrusel 3">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/Carrusel 1/headImg4.jpg" class="img-fluid" id="img-Carrusel" alt="Imagen Carrusel 4">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/Carrusel 1/headImg5.jpg" class="img-fluid" id="img-Carrusel" alt="Imagen Carrusel 5">
+          </div>
+        </div>
+        <!--Botones de accion del carrusel next y prev-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <!--Menu-->
+  <header class="site-header sticky-top py-2">
+    <!--Menu principal-->
+    <nav class="container d-flex flex-md-row justify-content-between navbar-expand-lg navbar-light">
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="menu-item py-2"><a href="../index.html#comoFunciona">Cómo Funciona</a></li>
+          <li class="menu-item py-2"><a href="../Auth/register.html">Registrar</a></li>
+          <li class="menu-item py-2"><a href="../index.html#login">Ingresar</a></li>
+          <li class="menu-item py-2"><a href="../index.html#comentarios">Comentarios</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+  <br id="registro">
+  <div class="container d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
+    <main class="form-signin w-100 m-auto">
+      <h1 class="h3 mb-3 fw-normal text-center">¿Quieres que te llamemos?</h1>
+      <!--Formulario de registro-->
+      <form class="row g-3">
+
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+
+        <div class="col-md-6">
+          <label for="ciudad" class="form-label">Ciudad</label>
+          <select id="ciudad" class="form-select">
+            <option selected>Seleccione</option>
+            <option>Bogotá</option>
+            <option>New York</option>
+            <option>París</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+
+        <div class="col-md-4">
+          <label for="number" class="form-label">Teléfono</label>
+          <input type="number" class="form-control" id="edad" placeholder="1234567">
+        </div>
+
+        <div class="col-md-4">
+          <label for="email" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+
+        <!--Botón de envio de formulario de contacto-->
+        
+        <!-- <div class="col-12">
+          <button class="btn btn-success w-100 py-2" id="botonContactar">Contáctame</button>
+        </div> -->
+      </form>
+      <br><br>
+      </form>
+    </main>
+  </div>
+  <div class="container">
+    <div class="row">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Llámame!
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-info">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">TE CONTACTAREMOS!!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Gracias por confiar en nuestros servicios. En breve serás contactado por alguno de nuestros profesionales que estarán prestos en ayudarte con tu inquietud.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <br id="Contactanos">
+  <hr class="featurette-divider">
+  <!--Footer sección de contactos-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!--datos de la empresa-->
+        <div class="col-md-4 column">
+          <div>
+            <h2>Always Chic</h2>
+            <p>&copy; 2024 Company, Inc. &middot; </p>
+            <p>Talento Tech</p>
+          </div>
+        </div>
+        <!--Direccionamiento al formulario de contacto-->
+        <div class="col-md-4 column">
+          <div>
+            <!-- <button class="btn btn-warning w-100 py-2 " id="contactar" type="submit">Quieres que te llamemos?</button> -->
+          </div>
+        </div>
+        <!--Redes sociales-->
+        <div class="col-md-4 column text-center">
+          <div class="tarjeta-redes">
+            <h2>Síguenos!!</h2>
+            <ul class="social-icons">
+              <li><a href="https://www.facebook.com" target="_blank">Facebook<i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li><a href="https://www.Whatsapp.com" target="_blank">Whatsapp<i class="fab fa-whatsapp"></i></a></li>
+              <li><a href="https://www.instagram.com" target="_blank">Instagram<i class="fab fa-instagram"></i></a>
+              </li>
+              <li><a href="https://www.linkedin.com" target="_blank">LinkedIn<i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li><a href="https://www.youtube.com" target="_blank">Youtube<i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>v5</p>
+  </footer>
+  <script src="../assets/js/jsCont.js"></script>
+  <!--Script de js - Boostrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
