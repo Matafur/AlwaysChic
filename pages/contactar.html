@@ -49,6 +49,7 @@
     </div>
   </div>
 
+  </div>
   <!--Menu-->
   <header class="site-header sticky-top py-2">
     <!--Menu principal-->
@@ -59,12 +60,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="menu-item py-2"><a href="../index.html#comoFunciona">Como Funciona</a></li>
-          <!-- <li class="menu-item py-2"><a href="../index.html">Ingresar</a></li> -->
-          <!-- <li class="menu-item py-2"><a href="#registro">Registrar</a></li> -->
-          <li class="menu-item py-2"><a href="../index.html#comentarios">Comentarios</a></li>
-          <li class="menu-item py-2"><a href="../pages/contactar.html">Contactanos</a></li>
-          <li class="menu-item py-2"><a href="../pages/actualiza.html">Actualiza Datos</a></li>
+          <li class="menu-item py-2"><a href="../index.html">Cómo Funciona</a></li>
+          <li class="menu-item py-2"><a href="../index.html">Registrar</a></li>
+          <li class="menu-item py-2"><a href="../index.html">Ingresar</a></li>
+          <li class="menu-item py-2"><a href="../index.html">Comentarios</a></li>
         </ul>
 
       </div>
@@ -74,18 +73,76 @@
   <br id="registro">
   <div class="container d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
     <main class="form-signin w-100 m-auto">
-      <h1 class="h3 mb-3 fw-normal text-center">Bienvenido usuario!! </h1>
+      <h1 class="h3 mb-3 fw-normal text-center">¿Quieres que te llamemos?</h1>
       <!--Formulario de registro-->
+      <form class="row g-3">
 
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
 
+        <div class="col-md-6">
+          <label for="ciudad" class="form-label">Ciudad</label>
+          <select id="ciudad" class="form-select">
+            <option selected>Seleccione</option>
+            <option>Bogotá</option>
+            <option>New York</option>
+            <option>París</option>
+          </select>
+        </div>
 
+        <div class="col-md-4">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
 
+        <div class="col-md-4">
+          <label for="number" class="form-label">Teléfono</label>
+          <input type="number" class="form-control" id="edad" placeholder="1234567">
+        </div>
+
+        <div class="col-md-4">
+          <label for="email" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+
+        <!--Botón de envio de formulario de contacto-->
+        
+        <!-- <div class="col-12">
+          <button class="btn btn-success w-100 py-2" id="botonContactar">Contáctame</button>
+        </div> -->
+      </form>
       <br><br>
       </form>
     </main>
   </div>
+  <div class="container">
+    <div class="row">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Llámame!
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-info">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">TE CONTACTAREMOS!!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Gracias por confiar en nuestros servicios. En breve serás contactado por alguno de nuestros profesionales que estarán prestos en ayudarte con tu inquietud.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--Footer-->
   <br id="contactanos">
+
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -97,16 +154,15 @@
             <p>Talento Tech</p>
           </div>
         </div>
-        <!--Direccionamiento al formulario de contacto-->
         <div class="col-md-4 column">
           <div>
-            <button class="btn btn-warning w-100 py-2 " id="contactar" type="submit">Quieres que te llamemos?</button>
+            <button class="btn btn-warnin w-100 py-2 " id="contacto" type="button"></button>
           </div>
         </div>
         <!--Redes sociales-->
         <div class="col-md-4 column text-center">
           <div class="tarjeta-redes">
-            <h2>Siguenos!!</h2>
+            <h2>Síguenos!!</h2>
             <ul class="social-icons">
               <li><a href="https://www.facebook.com" target="_blank">Facebook<i class="fab fa-facebook-f"></i></a></li>
               <li><a href="https://www.Whatsapp.com" target="_blank">Whatsapp<i class="fab fa-whatsapp"></i></a></li>
@@ -119,10 +175,11 @@
       </div>
     </div>
   </footer>
-
+  <script src="../assets/js/jsCont.js"></script>
+  <!--Script de js - Boostrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
 </body>
-<!--Script de js - Boostrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script src="../assets/js/jsUser.js"></script>
+
 </html>
