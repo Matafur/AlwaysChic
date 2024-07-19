@@ -27,6 +27,11 @@ function registro(){
     window.location.href = './Auth/register.html'
 }
 
+function contactar(){
+    window.location.href = './Auth/register.html'
+}
+
+
 document.getElementById("contactar").addEventListener("click", function () {
     window.location.href = "pages/contactar.html";
 });

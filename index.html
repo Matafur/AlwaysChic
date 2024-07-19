@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -63,27 +63,27 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="menu-item py-2"><a href="#comoFunciona">Cómo Funciona</a></li>
-          <li class="menu-item py-2"><a href="./Auth/register.html">Registrar</a></li>
+          <li class="menu-item py-2"><a href="#comoFunciona">Como Funciona</a></li>
           <li class="menu-item py-2"><a href="#login">Ingresar</a></li>
+          <li class="menu-item py-2"><a href="./Auth/register.html">Registrar</a></li>
           <li class="menu-item py-2"><a href="#comentarios">Comentarios</a></li>
-          <li class="menu-item py-2"><a href="pages/contactar.html">Contáctanos</a></li>
+          <li class="menu-item py-2"><a href="./pages/contactar.html">Contactanos</a></li>
         </ul>
 
       </div>
     </nav>
   </header>
-  <br>
+  <br >
   <div>
     <hr class="featurette-divider" id="comoFunciona">
     <!--Contenedor primera fila de imagenes-->
     <div class="py-3" >
       <!--Primera tarjeta-->
-      <h1 class="text-center py-3" >¿Cómo funciona?</h1>
+      <h1 class="text-center py-3" >¿Como funciona?</h1>
       <div>
         <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
           <div class="tarjeta-oscura">
-            <h2 class="display-5">Cómo funciona</h2>
+            <h2 class="display-5">Como funciona</h2>
             <div class="my-3 py-3">
               <p class="lead">And an even wittier subheading.</p>
             </div>
@@ -121,7 +121,7 @@
             <div class="my-3 p-3">
               <p class="lead">And an even wittier subheading.</p>
             </div>
-            <button class="btn btn-success w-100 py-2" onclick="registro()">Comienza tu registro</button>
+            <button class="btn btn-warning w-100 py-2" onclick="registro()">Comienza tu registro</button>
           </div>
         </div>
       </div >
@@ -164,10 +164,10 @@
             <h2 class="display-5">Bienvenido</h2>
             <div class="my-1 p-1">
               <p class="lead">Texto de bienvenida</p>
-              <form id="loginForm"> 
+              <form id="loginForm">
                 <div class="form-floating my-3">
                   <input type="email" class="form-control" id="correo" name="correo" placeholder="name@example.com" required>
-                  <label for="correo">Correo</label>
+                  <label for="correo">Email</label>
                 </div>
                 <div class="form-floating my-3">
                   <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
@@ -176,7 +176,7 @@
                 <button class="btn btn-primary w-100 py-2" type="submit">Ingresar</button>
               </form>
               <p class="lead">Texto de para registrarse</p>
-              <button class="btn btn-success w-100 py-2" onclick="registro()">Comienza tu registro</button>
+              <button class="btn btn-warning w-100 py-2" type="submit">Comienza tu registro</button>
             </div>
           </div>
           <!--Sexta tarjeta carrusel-->
@@ -223,23 +223,23 @@
           <div class="tarjeta-carrusel">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
+                <div class="carousel-item active" data-bs-interval="30000">
                   <img src="./assets/Carrusel 5/carrusel5Img1.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="30000">
                   <img src="./assets/Carrusel 5/carrusel5Img2.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="30000">
                   <img src="./assets/Carrusel 5/carrusel5Img3.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="30000">
                   <img src="./assets/Carrusel 5/carrusel5Img4.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="30000">
                   <img src="./assets/Carrusel 5/carrusel5Img5.jpg" id="img-carrusel-tarjetaba" class="d-block"
                     alt="imagen carrusel">
                 </div>
@@ -300,13 +300,13 @@
           <!--Direccionamiento al formulario de contacto-->
           <div class="col-md-4 column">
             <div>
-              <button class="btn btn-warning w-100 py-2 " id="contactar" type="submit">Quieres que te llamemos?</button>
+              <button class="btn btn-warning w-100 py-2 " id="contactar" type="submit">Quieres que te llamemos</button>
             </div>
           </div>
           <!--Redes sociales-->
           <div class="col-md-4 column text-center">
             <div class="tarjeta-redes">
-              <h2>Síguenos!!</h2>
+              <h2>Siguenos!!</h2>
               <ul class="social-icons">
                 <li><a href="https://www.facebook.com" target="_blank">Facebook<i class="fab fa-facebook-f"></i></a>
                 </li>
@@ -321,12 +321,12 @@
           </div>
         </div>
       </div>
-      <p>v5</p>
     </footer>
   </div>
 </body>
 <!--Script de js - Boostrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
   integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script src="./assets/js/main.js"></script> 
+<script src="./assets/js/main.js"></script>
+
 </html>
