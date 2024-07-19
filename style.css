@@ -6,6 +6,19 @@
 
 }
 
+.navbar-toggler-icon{
+  color: white;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.menu-item {
+  text-align: center;
+}
+
 hr {
   border: none;
   height: 4px;
