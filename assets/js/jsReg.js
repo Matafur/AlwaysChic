@@ -1,28 +1,45 @@
-document.getElementById("formReg").addEventListener("submit", (event) => {
-    event.preventDefault(); 
+document.getElementById("regForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
     const acceptTerms = document.getElementById("gridCheck").checked;
     const errorMessage = document.getElementById("error-message");
     const correo = document.getElementById("correo").value;
     const password = document.getElementById("password").value;
 
+    console.log("reg:acceptTerms->",acceptTerms);
+    console.log("reg:errorMessage->", errorMessage);
+    console.log("reg:correo->",correo);
+    console.log("reg:password->", password);
+
     if (!acceptTerms) {
+        console.log("NO acepto terminos y condiciones")
         errorMessage.style.display = "block";
     } else {
-        errorMessage.style.display = "none"; 
-        fetch("http://localhost:4000/api/login/signUp", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ correo, password }),
-        })
-        .then((response) => {
-            console.log(response)
-            response.ok
-                ? (window.location.href = "../index.html#login")
-                : alert("Cli : Error en el registro del usuario.")
-        })
-        .catch(() =>
-            alert("Cli : Ha ocurrido un error en el registro de tu cuenta.")
-        );
+        console.log("SI acepto terminos y condiciones")
+        errorMessage.style.display = "none";
+        try {
+            // const response = await fetch("http://localhost:4000/api/login/signUp",{
+            const response = await fetch(
+                "https://back-end-cyan-seven.vercel.app/api/login/signUp",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ correo, password }),
+                }
+            );
+            const result = await response.json();
+            console.log("reg:response->", response); //borrar
+            console.log("reg:result->", result); //borrar
+            if (response.ok) {
+                alert("Registro exitoso!. Ingresa con tu correo y clave registrados.");
+                window.location.href = "../index.html#login";
+            } else {
+                alert(`El registro falló : statsus : ${result.status} ${result.name} ${result.code}`);
+                throw new Error("Error al registrar el usuario.");
+            }
+        } catch (error) {
+			alert("Error Reg:" + error);
+            console.error("Error de registro:", error);
+        }
     }
 });
 
