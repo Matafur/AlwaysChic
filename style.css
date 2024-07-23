@@ -78,30 +78,27 @@ hr {
     border: 5px solid;
   }
 
-  .tarjeta-blanca{
-    padding: 0px 48px 0px 48px; 
-    margin-right: 16px;
+  #tarjeta-blanca{
+    padding: 8px 8px 8px 8px;  
     text-align: center;
   }
 
-  .tarjeta-oscura{
+  #tarjeta-oscura{
     background-color: #212529;
     padding: 48px 48px 0px 48px; 
-    margin-right: 16px;
+    border-radius: 5%;
     text-align: center;
     color: #ffffff;
     
   }
 
-  .tarjeta-carrusel{
+  #tarjeta-carrusel{
     padding: 8px 8px 8px 8px; 
-    margin-right: 16px;
     text-align: center;
   }
   
-  .tarjeta-carruselb{
+  #tarjeta-carruselb{
     padding: 8px 8px 8px 8px; 
-    margin-right: 16px;
     text-align: center;
   }
 
@@ -193,12 +190,30 @@ hr {
     font-weight: bold;
   }
 
+  .lead{
+    font-weight: 900;
+  }
 
-    @media (min-width: 768px) {
-    .flex-md-equal > * {
-    flex: 1;
+  @media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1400px !important;
     }
+}
+
+  @media (min-width: 1450px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1400px !important;
     }
+}
+
+@media (min-width: 1810px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1800px !important;
+  }
+}
+
+
+
     
 .error {
             color: red;
