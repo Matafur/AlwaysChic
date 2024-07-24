@@ -4,4 +4,4 @@
 // });
 
 const nombre = localStorage.getItem("nombre");
-document.getElementById("nomUsr").textContent = "BIENVENIDO!! "+nombre;
+document.getElementById("nomUsr").textContent = "BIENVENIDA!! "+nombre;

@@ -17,9 +17,9 @@ document.getElementById("regForm").addEventListener("submit", async (event) => {
         console.log("SI acepto terminos y condiciones")
         errorMessage.style.display = "none";
         try {
-            // const response = await fetch("http://localhost:4000/api/login/signUp",{
+            // const response = await fetch("http://localhost:4000/api/login/signUp",{   //dev
             const response = await fetch(
-                "https://back-end-cyan-seven.vercel.app/api/login/signUp",
+                "https://back-end-cyan-seven.vercel.app/api/login/signUp",  //prod
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

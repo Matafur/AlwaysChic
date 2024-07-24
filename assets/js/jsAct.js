@@ -13,9 +13,9 @@ document.getElementById("actForm").addEventListener("submit", async (event) => {
     };
     console.log("act:usractualizado->", usuarioActualizado); //borrar
     try {
-        // const response = await fetch("http://localhost:4000/api/usuarios", {
+        // const response = await fetch("http://localhost:4000/api/usuarios", {   //dev
         const response = await fetch(
-            "https://back-end-cyan-seven.vercel.app/api/usuarios",
+            "https://back-end-cyan-seven.vercel.app/api/usuarios",  //prod
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
