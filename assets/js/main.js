@@ -7,8 +7,8 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
         //console.log("login:correo->", correo); //borra
         //console.log("login:password->", password); //borrar
         try {
-            const response = await fetch("http://localhost:4000/api/login",    // dev
-            //const response = await fetch("https://back-end-cyan-seven.vercel.app/api/login",  //prod
+            //const response = await fetch("http://localhost:4000/api/login",    // dev
+            const response = await fetch("https://back-end-cyan-seven.vercel.app/api/login",  //prod
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
