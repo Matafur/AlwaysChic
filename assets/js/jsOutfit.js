@@ -51,3 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     } 
 });
+
+document.getElementById("logout").addEventListener("click", async (event) => {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = "../index.html";
+});
+
+document.getElementById("newOpt").addEventListener("click", function () {
+    location.reload();
+});

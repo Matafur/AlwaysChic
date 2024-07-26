@@ -1,10 +1,5 @@
-// ESTABA SALIENDO UN ERROR porque el botón con  el "id" llamado "contactar" está en comentario
-// document.getElementById("contactar").addEventListener("click", function () {
-//     window.location.href = "../pages/contactar.html";
-// });
-
 const nombre = localStorage.getItem("nombre");
-document.getElementById("nomUsr").textContent = "BIENVENIDA!! "+nombre;
+document.getElementById("nomUsr").textContent = "CORDIAL SALUDO!! "+nombre;
 
 document.getElementById('consultarOutfit').addEventListener('click', function() {
     
@@ -24,4 +19,10 @@ document.getElementById('consultarOutfit').addEventListener('click', function() 
     } else {
         alert("Por favor, completa todos los campos del formulario.");
     }
+});
+
+document.getElementById("logout").addEventListener("click", async (event) => {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = "../index.html";
 });

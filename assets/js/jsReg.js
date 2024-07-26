@@ -2,24 +2,20 @@ document.getElementById("regForm").addEventListener("submit", async (event) => {
     event.preventDefault();
     const acceptTerms = document.getElementById("gridCheck").checked;
     const errorMessage = document.getElementById("error-message");
+    const valPass = document.getElementById("error-pass");
     const correo = document.getElementById("correo").value;
     const password = document.getElementById("password").value;
+    const errorPass = document.getElementById("error-pass");
 
-    console.log("reg:acceptTerms->",acceptTerms);
-    console.log("reg:errorMessage->", errorMessage);
-    console.log("reg:correo->",correo);
-    console.log("reg:password->", password);
-
+    errorPass.style.display = "none";
+    
     if (!acceptTerms) {
-        console.log("NO acepto terminos y condiciones")
         errorMessage.style.display = "block";
     } else {
-        console.log("SI acepto terminos y condiciones")
         errorMessage.style.display = "none";
         try {
-            // const response = await fetch("http://localhost:4000/api/login/signUp",{   //dev
-            const response = await fetch(
-                "https://back-end-cyan-seven.vercel.app/api/login/signUp",  //prod
+            //const response = await fetch("http://localhost:4000/api/login/signUp", //dev
+            const response = await fetch("https://back-end-cyan-seven.vercel.app/api/login/signUp",  //prod
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -27,18 +23,18 @@ document.getElementById("regForm").addEventListener("submit", async (event) => {
                 }
             );
             const result = await response.json();
-            console.log("reg:response->", response); //borrar
-            console.log("reg:result->", result); //borrar
             if (response.ok) {
                 alert("Registro exitoso!. Ingresa con tu correo y clave registrados.");
+                localStorage.setItem("nombre","No olvides actualizar tus datos.");
                 window.location.href = "../index.html#login";
             } else {
-                alert(`El registro falló : statsus : ${result.status} ${result.name} ${result.code}`);
-                throw new Error("Error al registrar el usuario.");
+                //alert(`El registro falló : statsus : ${result.status} ${result.name} ${result.code}`);
+                throw new Error(result.code);
             }
         } catch (error) {
-			alert("Error Reg:" + error);
-            console.error("Error de registro:", error);
+            errorPass.textContent = error.message;
+            errorPass.style.display = "block";
+            console.error(error.message);
         }
     }
 });

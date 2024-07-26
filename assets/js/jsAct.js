@@ -1,3 +1,27 @@
+
+function llenaCampos() {
+    if (!(localStorage.getItem("nombre") === "No olvides actualizar tus datos.")) {  // si existen datos para ese usuario
+        const id = localStorage.getItem("auth_user_id");
+        var settings = {
+            url: "https://back-end-cyan-seven.vercel.app/api/usuarios/" + id,    //prod
+            //url: "http://localhost:4000/api/usuarios/" + id, //des
+            method: "GET",
+            timeout: 0,
+        };
+        $.ajax(settings).done(function (response) {
+            $("#nombre").val(response[0].nombre);
+            $("#edad").val(response[0].edad);
+            $("#genero").val(response[0].genero);
+            $("#telefono").val(response[0].telefono);
+            $("#direccion").val(response[0].direccion);
+            $("#ciudad").val(response[0].ciudad);
+        });
+    }
+}
+
+llenaCampos()
+
+// Actualizo la info de la tabla usuarios en Supabase
 document.getElementById("actForm").addEventListener("submit", async (event) => {
     event.preventDefault();
     const usuarioActualizado = {
@@ -11,11 +35,9 @@ document.getElementById("actForm").addEventListener("submit", async (event) => {
         ciudad: document.getElementById("ciudad").value,
         correo: localStorage.getItem("correo"),
     };
-    console.log("act:usractualizado->", usuarioActualizado); //borrar
     try {
-        // const response = await fetch("http://localhost:4000/api/usuarios", {   //dev
-        const response = await fetch(
-            "https://back-end-cyan-seven.vercel.app/api/usuarios",  //prod
+        const response = await fetch("https://back-end-cyan-seven.vercel.app/api/usuarios",  //prod
+        //const response = await fetch("http://localhost:4000/api/usuarios", //dev
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
@@ -23,31 +45,22 @@ document.getElementById("actForm").addEventListener("submit", async (event) => {
             }
         );
         const result = await response.json();
-        console.log("Act :response->", response); //borrar
-        console.log("result->", result); //borrar
         if (response.ok) {
             alert("Actualización de datos exitosa!.");
-            localStorage.setItem(
-                "nombre",
-                document.getElementById("nombre").value
-            );
+            localStorage.setItem("nombre",document.getElementById("nombre").value);
             window.location.href = "../User/user.html";
         } else {
-            alert(
-                `La actualización falló : statsus : ${result.status} name : ${result.name} code:${result.code}`
-            );
-            throw new Error(
-                "Error al actualizar los datos. Vuelva a ingresar."
-            );
+            //alert(`La actualización falló : statsus : ${result.status} name : ${result.name} code:${result.code}`);
+            throw new Error("Error al actualizar los datos. Vuelva a ingresar.");
         }
     } catch (error) {
-        alert("Error Act:" + error);
-        console.error("Error de Actualizacion:", error);
+        alert("Error Actualización:" + error);
+        console.error("Error de Actualización:", error);
     }
 });
 
 document.getElementById("logout").addEventListener("click", async (event) => {
     event.preventDefault();
-    localStorage.clear()
+    localStorage.clear();
     window.location.href = "../index.html";
 });
