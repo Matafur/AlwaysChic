@@ -224,9 +224,12 @@ hr {
   align-items: center;
   display: flow-root;
 }
-
-    
+/* Jorge Figueroa */
 .error {
+            color: red;
+            display: none;
+        }
+.valPass {
             color: red;
             display: none;
         }

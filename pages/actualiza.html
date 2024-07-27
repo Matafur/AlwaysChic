@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/Fotos fijas/AC.png" type="image/png">
+    <title>Always Chic</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Always Chic</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="body">
@@ -67,8 +68,8 @@
                 <ul class="navbar-nav">
                     <li class="menu-item py-2"><a href="../User/user.html">Inicio</a></li>
                     <li class="menu-item py-2"><a href="../User/user.html#comentarios">Comentarios</a></li>
-                    <!-- <li class="menu-item py-2"><a href="contactar.html">Contáctanos</a></li> -->
-                    <li class="menu-item py-2" id="close"><a href="#" id="logout">Cerrar Sesión</a></li>
+                    <!-- <li class="menu-item py-2"><a href="contactar.html">Cont&aacutectanos</a></li> -->
+                    <li class="menu-item py-2" id="close"><a href="#" id="logout">Cerrar Sesi&oacuten</a></li>
                 </ul>
             </div>
         </nav>
@@ -79,17 +80,14 @@
             <h1 class="h3 mb-3 fw-normal text-center">Actualiza tus datos</h1>
             <!--Formulario de registro-->
             <form class="row g-3" id="actForm">
-
                 <div class="col-12 col-md-6">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre">
                 </div>
-
                 <div class="col-12 col-md-6">
                     <label for="edad" class="form-label">Edad</label>
                     <input type="number" class="form-control" id="edad">
                 </div>
-
                 <div class="col-12 col-md-6">
                     <label for="genero" class="form-label">Género</label>
                     <select id="genero" class="form-select">
@@ -98,17 +96,14 @@
                         <option>femenino</option>
                     </select>
                 </div>
-
                 <div class="col-12 col-md-6">
                     <label for="telefono" class="form-label">Teléfono</label>
                     <input type="number" class="form-control" id="telefono" placeholder="1234567">
                 </div>
-
                 <div class="col-12 col-md-6">
                     <label for="direccion" class="form-label">Dirección</label>
                     <input type="text" class="form-control" id="direccion" placeholder="1234 Main St">
                 </div>
-
                 <div class="col-12 col-md-6">
                     <label for="ciudad" class="form-label">Ciudad</label>
                     <select id="ciudad" class="form-select">
@@ -118,8 +113,7 @@
                         <option value="París">París</option>
                     </select>
                 </div>
-
-                <!--Botón de envio de formulario-->
+                <!--Botón de envío de formulario-->
                 <div class="col-12">
                     <button class="btn btn-success w-100 mt-5" type="submit">Actualizar</button>
                 </div>
@@ -173,12 +167,11 @@
         </div>
         <p>v5</p>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Script de js - Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/jsAct.js"></script>
 </body>
-<!--Script de js - Boostrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
-<script src="../assets/js/jsAct.js"></script>
-
 </html>
