@@ -14,8 +14,7 @@ document.getElementById("regForm").addEventListener("submit", async (event) => {
     } else {
         errorMessage.style.display = "none";
         try {
-            //const response = await fetch("http://localhost:4000/api/login/signUp", //dev
-            const response = await fetch("https://back-end-cyan-seven.vercel.app/api/login/signUp",  //prod
+            const response = await fetch( baseUrl + "/api/login/signUp",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

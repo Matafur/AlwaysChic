@@ -1,10 +1,9 @@
-
+// Lleno los campos del usuario si existe en la BD. Si no existe los deja en blanco
 function llenaCampos() {
     if (!(localStorage.getItem("nombre") === "No olvides actualizar tus datos.")) {  // si existen datos para ese usuario
         const id = localStorage.getItem("auth_user_id");
         var settings = {
-            url: "https://back-end-cyan-seven.vercel.app/api/usuarios/" + id,    //prod
-            //url: "http://localhost:4000/api/usuarios/" + id, //des
+            url: baseUrl + "/api/usuarios/" + id,
             method: "GET",
             timeout: 0,
         };
@@ -36,8 +35,7 @@ document.getElementById("actForm").addEventListener("submit", async (event) => {
         correo: localStorage.getItem("correo"),
     };
     try {
-        const response = await fetch("https://back-end-cyan-seven.vercel.app/api/usuarios",  //prod
-        //const response = await fetch("http://localhost:4000/api/usuarios", //dev
+        const response = await fetch( baseUrl + "/api/usuarios",
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

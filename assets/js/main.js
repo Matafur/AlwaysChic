@@ -5,8 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
     const password = document.getElementById("password").value;
 
     try {
-        //const response = await fetch("http://localhost:4000/api/login", // dev
-        const response = await fetch("https://back-end-cyan-seven.vercel.app/api/login",  //prod
+        const response = await fetch( baseUrl + "/api/login", 
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
